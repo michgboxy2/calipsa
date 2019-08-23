@@ -1,0 +1,9 @@
+BEGIN TRANSACTION;
+
+CREATE TABLE game (
+   id serial PRIMARY KEY,
+   roomid VARCHAR(100),
+   word VARCHAR NOT NULL
+   );
+
+COMMIT;

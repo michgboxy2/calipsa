@@ -1,0 +1,36 @@
+version: '3.6'
+
+services:
+  #Backend API
+    # Postgres
+  postgres:
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: calipsa
+      POSTGRES_HOST: 192.168.43.134
+      POSTGRES_URL: postgres://admin:password@192.168.43.134:5432/calipsa
+
+    # image: postgres
+    build: ./postgres
+    restart: always
+    ports:
+      - "5432:5432"
+      
+  app:
+    container_name: app
+    build: ./
+    command: npm start
+    working_dir: /usr/src/calipsa
+    ports:
+    - "3000:3000"
+    environment:
+      POSTGRES_URI: postgres://admin:password@192.168.43.134:5432/calipsa
+    volumes:
+      - ./:/usr/src/calipsa
+    links:
+      - postgres
+  
+  
+  
+  
