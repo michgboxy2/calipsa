@@ -28,6 +28,7 @@ services:
       POSTGRES_URI: postgres://admin:password@postgres:5432/calipsa
     volumes:
       - ./:/usr/src/calipsa
+      - ./usr/src/calipsa/node_modules
     links:
       - postgres
   
