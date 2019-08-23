@@ -3,11 +3,11 @@
 const Sequelize = require("sequelize");
 const {POSTGRES_URI} = process.env;
 
-// const sequelize = new Sequelize(POSTGRES_URI);
-const sequelize = new Sequelize('calipsa', 'admin', 'password', {
-  host: 'localhost',
-  dialect: 'postgres'
-});
+const sequelize = new Sequelize(POSTGRES_URI);
+// const sequelize = new Sequelize('calipsa', 'admin', 'password', {
+//   host: 'localhost',
+//   dialect: 'postgres'
+// });
 
 sequelize
   .authenticate()

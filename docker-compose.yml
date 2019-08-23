@@ -8,8 +8,8 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
       POSTGRES_DB: calipsa
-      POSTGRES_HOST: 192.168.43.134
-      POSTGRES_URL: postgres://admin:password@192.168.43.134:5432/calipsa
+      POSTGRES_HOST: 192.168.15.255
+      POSTGRES_URL: postgres://admin:password@postgres:5432/calipsa
 
     # image: postgres
     build: ./postgres
@@ -25,7 +25,7 @@ services:
     ports:
     - "3000:3000"
     environment:
-      POSTGRES_URI: postgres://admin:password@192.168.43.134:5432/calipsa
+      POSTGRES_URI: postgres://admin:password@postgres:5432/calipsa
     volumes:
       - ./:/usr/src/calipsa
     links:

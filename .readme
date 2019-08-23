@@ -1,0 +1,2 @@
+please change the POSTGRES_HOST value on the docker-compose.yml to your computer's private IP address 
+so as to map the docker to the ip address being broadcast by your environment.
