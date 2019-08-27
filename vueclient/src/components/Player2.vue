@@ -48,7 +48,7 @@ export default {
       creator: JSON.parse(sessionStorage.getItem("gameCreationDetails")).name,
       gameid: JSON.parse(sessionStorage.getItem("gameCreationDetails")).gameId,
       status: false,
-      socket: io("127.0.0.1:3000"),
+      socket: io("http://127.0.0.1:3000"),
       game: {
         option: "",
         class: "",

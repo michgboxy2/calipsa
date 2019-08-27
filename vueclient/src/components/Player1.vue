@@ -53,7 +53,7 @@ export default {
       joiner: false,
       gameId: JSON.parse(sessionStorage.getItem("gameJoinDetails")).gameId,
       status: true,
-      socket: io("127.0.0.1:3000"),
+      socket: io("http://127.0.0.1:3000"),
       game: {
         option: "",
         input: "",
